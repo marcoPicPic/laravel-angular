@@ -17,10 +17,12 @@ import { SigninComponent } from './signin/signin.component';
 import { NowComponent } from './utils/now.component';
 import { AuthService } from "./service/auth.service";
 import { BlogService } from "./service/blog.service";
+import { HeaderNavBar} from "./header-nav-bar.component"
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderNavBar,
     BlogComponent,
     QuoteComponent,
     QuotesComponent,
