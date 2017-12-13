@@ -3,7 +3,7 @@ import {Component, Attribute} from '@angular/core';
 
 
 @Component({
-  selector: 'now',
+  selector: 'ng-now',
   template: `<p>Today is {{today | date}}</p>
   <p>Or if you prefer, {{today | date:'medium'}}</p>
   <p>The time is {{today | date:'jmZ'}}</p>

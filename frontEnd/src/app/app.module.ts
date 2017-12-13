@@ -18,6 +18,7 @@ import { NowComponent } from './utils/now.component';
 import { AuthService } from "./service/auth.service";
 import { BlogService } from "./service/blog.service";
 import { HeaderNavBar} from "./header-nav-bar.component"
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HeaderNavBar} from "./header-nav-bar.component"
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    NgbModule.forRoot()
   ],
   providers: [QuoteService, AuthService, BlogService],
   bootstrap: [AppComponent]

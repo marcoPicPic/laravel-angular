@@ -5,7 +5,7 @@ import { Blog } from "../blog.interface";
 import { BlogService } from "./../service/blog.service";
 
 @Component({
-  selector: 'app-blogs',
+  selector: 'ng-app-blogs',
   templateUrl: './blog.component.html'})
 
   export class BlogComponent implements OnInit {
