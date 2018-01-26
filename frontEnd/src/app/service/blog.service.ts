@@ -9,9 +9,7 @@ import { AuthService } from "./auth.service";
 export class BlogService {
  private apiUrl = "http://localhost/backEndBlog/public/api/";
 
-
   constructor(private http: Http, private authService: AuthService) {
-
   }
 
   addBlog(content: string) {
@@ -23,6 +21,27 @@ export class BlogService {
 
   getBlogs(): Observable<any> {
     return this.http.get(this.apiUrl +'blogs')
+      .map(
+        (response: Response) => {
+          return response.json().blogs;
+        }
+      );
+  }
+
+  getBlog(id: number): Observable<any> {
+    return this.http.get(this.apiUrl +'blog/' + id)
+      .map(
+        (response: Response) => {
+          return response.json().blog;
+        }
+      );
+  }
+/**
+ * recupere la liste des derniers blogs
+ *  
+ */
+  getBlogsSummary(): Observable<any> {
+    return this.http.get(this.apiUrl +'blogsSummary')
       .map(
         (response: Response) => {
           return response.json().blogs;
