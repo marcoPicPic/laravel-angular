@@ -1,0 +1,14 @@
+<blockquote *ngFor="let blog of blogs; let i = index">
+<div class="4u 12u(mobile)">
+    <section class="box">
+      <a href="#" class="image featured"><img src="{{ blog.srcImage }}" alt="" /></a>
+      <header>
+        <h3>{{ blog.srcImage }}</h3>
+      </header>
+      <p>{{ blog.srcImage }}</p>
+      <footer>
+        <a href="/blogs/id={{ blog.id }}" class="button alt">voir</a>
+      </footer>
+    </section>
+  </div>
+</blockquote>

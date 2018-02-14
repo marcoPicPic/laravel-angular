@@ -1,7 +1,7 @@
 {
   "project": {
     "version": "1.0.0-beta.22-1",
-    "name": "ng2-laravel"
+    "name": "ng5-laravel"
   },
   "apps": [
     {
@@ -18,9 +18,14 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/tether/dist/js/tether.min.js",        
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

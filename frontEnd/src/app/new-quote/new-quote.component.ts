@@ -3,7 +3,7 @@ import { NgForm } from "@angular/forms";
 import { QuoteService } from "../service/quote.service";
 
 @Component({
-  selector: 'app-new-quote',
+  selector: 'ng-app-new-quote',
   templateUrl: './new-quote.component.html',
   styleUrls: ['./new-quote.component.css']
 })

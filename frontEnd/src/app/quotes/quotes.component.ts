@@ -5,7 +5,7 @@ import { Quote } from "../quote.interface";
 import { QuoteService } from "../service/quote.service";
 
 @Component({
-  selector: 'app-quotes',
+  selector: 'ng-app-quotes',
   templateUrl: './quotes.component.html',
   styleUrls: ['./quotes.component.css']
 })

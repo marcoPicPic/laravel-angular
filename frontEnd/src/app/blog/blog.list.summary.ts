@@ -5,22 +5,22 @@ import { Blog } from "../blog.interface";
 import { BlogService } from "./../service/blog.service";
 
 @Component({
-  selector: 'ng-app-blogs',
-  templateUrl: './blog.component.html'})
+  selector: 'ng-app-blogs-summary',
+  templateUrl: './blog.list.summary.html'})
 
-  export class BlogComponent implements OnInit {
+  export class BlogListSummary implements OnInit {
     blogs: Blog[];
   
-
     constructor(private blogService: BlogService) {
      
      }
 
     ngOnInit() {
+      this.onGetBlogs();
     }
 
     onGetBlogs() {
-      this.blogService.getBlogs()
+      this.blogService.getBlogsSummary()
         .subscribe(
           (blogs: Blog[]) => this.blogs = blogs,
           (error: Response) => console.log(error)

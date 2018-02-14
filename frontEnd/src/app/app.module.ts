@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { BlogComponent } from './blog/blog.component';
+import { BlogListSummary } from './blog/blog.list.summary';
+
 import { NewQuoteComponent } from './new-quote/new-quote.component';
 import { routing } from "./app.routing";
 import { QuoteService } from "./service/quote.service";
@@ -18,12 +20,14 @@ import { NowComponent } from './utils/now.component';
 import { AuthService } from "./service/auth.service";
 import { BlogService } from "./service/blog.service";
 import { HeaderNavBar} from "./header-nav-bar.component"
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderNavBar,
     BlogComponent,
+    BlogListSummary,
     QuoteComponent,
     QuotesComponent,
     NewQuoteComponent,
@@ -35,7 +39,8 @@ import { HeaderNavBar} from "./header-nav-bar.component"
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    NgbModule.forRoot()
   ],
   providers: [QuoteService, AuthService, BlogService],
   bootstrap: [AppComponent]
